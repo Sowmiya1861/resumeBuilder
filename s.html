@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signstyle.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon"> 
+  </head>
+  <body>
+    <!-- <? php include 'signupm.php'; ?> -->
+  <div class="header">
+    <nav>
+        <ul>
+            <li><a href="welcome.html">Home</a></li>
+            <li><a href="keypoints.html">Key Points</a></li>
+            <li><a href="">Community</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+        </ul>
+    </nav>
+  </div>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form action="signupm.php" method="POST">
+        <div class="form-group">
+          <label for="name" >Name:</label>
+          <input type="text" id="name" name="name" required="">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required="">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required="">
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="cpassword" name="cpassword" required="">
+        </div>
+        <input type="submit" value="Sign Up">
+        <center><p>Already having an account? <a href="l.html">Login</a></p></center>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+    crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/25b0107836.js" crossorigin="anonymous"></script> 
+
+    <link rel="stylesheet" href="style2.css">
+    <title>Resume Form</title>
+</head>
+<body>
+    <!-- html code -->
+    <div class="container" id="cv-form">
+        <h2 class="text-center my-2">Resume Generator</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="">
+                <!-- first column -->
+                <center><h3>Personal Information</h3></center>
+
+                <div class="form-group">
+                    <label for="nameField" class="field">Name:</label>
+                    <input 
+                    type="text" 
+                    id="nameField" 
+                    placeholder="Enter here"
+                    class="form-control" >
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="numberField" class="field">Phone number:</label>
+                    <input 
+                    type="text" 
+                    id="numberField" 
+                    placeholder="Enter here"
+                    maxlength="10"
+                    class="form-control" >
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="emailField" class="field">Email Address:</label>
+                    <input
+                    type="email" 
+                    id="emailField" 
+                    placeholder="Enter here"
+                    class="form-control"
+                     >
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="addressField" class="field">Residential Address:</label>
+                    <input
+                    type="text" 
+                    id="addressField" 
+                    placeholder="Enter here"
+                    class="form-control"
+                    >
+                </div>
+
+                <!-- social media links -->
+
+                <div class="form-group mt-2">
+                    <label for="linField" class="field">LinkedIN:</label>
+                    <input 
+                    type="text"
+                    id="linField" 
+                    placeholder="Enter here"
+                    class="form-control" >
+                </div>
+
+                <!-- skills -->
+                <div>
+                    <label for="languagek" class="field">Languages Known:</label>
+                    <input 
+                    type="text"
+                    id="languagek"
+                    placeholder="Enter here"
+                    class="form-control">
+                </div>
+
+                <!-- profile picture -->
+
+                <div class="form-group mt-3">
+                    <label for="">Select your profile picture:</label>
+                    <input id="imgField" type="file" class="form-control" >
+                </div>
+
+                <!-- skills -->
+
+                <div class="form-group mt-2" id="sk">
+                    <label for="" class="field">Skills:</label>
+                    <textarea
+                    class="form-control skField"
+                    placeholder="Enter here"
+                    required></textarea>
+
+                    <div class="container text-center mt-2" id="skAddButton">
+                        <button onclick="addNewSkField()" type="button" class="btn btn-primary btn-sm">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+                <!-- hobbies -->
+
+                <div class="form-group mt-2" id="hb">
+                    <label for="" class="field">Hobbies:</label>
+                    <textarea
+                    class="form-control hbField"
+                    placeholder="Enter here"
+                    required></textarea>
+
+                    <div class="container text-center mt-2" id="hbAddButton">
+                        <button onclick="addNewHbField()" type="button" class="btn btn-primary btn-sm">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+                
+                </form>
+
+            </div>
+
+            <div class="col-md-6">
+                <!-- second column -->
+                <center><h3>Professional Information</h3></center>
+                <div class="form-group mt-2">
+                    <label for="" class="field">Objective:</label>
+                    <textarea 
+                    id="objectiveField"
+                    class="form-control"
+                    placeholder="Enter here"
+                    required></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for="" class="field">Education:</label>
+                    <textarea
+                    class="form-control weField"
+                    placeholder="Enter here"
+                    required></textarea>
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWeField()" class="btn btn-primary btn-sm">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2" id="aq">
+                    <label for="" class="field">Projects:</label>
+                    <textarea 
+                    class="form-control eqField"
+                    placeholder="Enter here"
+                    required></textarea>
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAqField()" class="btn btn-primary btn-sm">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+                <!-- area of interest -->
+
+                <div class="form-group mt-2" id="in">
+                    <label for="" class="field">Area of Interest:</label>
+                    <textarea 
+                    class="form-control inField"
+                    placeholder="Enter here"
+                    required></textarea>
+                    <div class="container text-center mt-2" id="inAddButton">
+                        <button onclick="addNewInField()" type="button" class="btn btn-primary btn-sm">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container text-center mt-4">
+            <button type="submit" onclick="generateCV()" class="btn btn-primary btn-lg colory">Generate CV</button>
+        </div>
+    </div>
+
+    <!-- cv template -->
+
+    <div class="container txtcolor" id="cv-template">
+        <div class="row">
+            <!-- first column -->
+            <div class="col-md-8 py-5">
+                <h1 class="text-center" id="nameT2" style="font-weight: 980;">Sowmiya Chelliah</h1>
+
+                <!-- objective card -->
+                <div>
+                    <div>
+                        <h3>Objective:</h3>
+                    </div>
+                    <div>
+                        <p id="objectiveT">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id distinctio ad voluptas, quidem obcaecati quibusdam ratione? Quasi eos exercitationem, pariatur ipsam placeat distinctio corrupti molestias, rem quo aspernatur consequuntur nostrum quos? Aut dignissimos impedit laboriosam, quod ad, eius eos delectus repudiandae nobis quis quisquam tempora enim ipsum, perferendis eum ratione!</p>
+
+                    </div>
+                </div>
+                <hr>
+
+                <!-- work experience -->
+                <div>
+                    <div>
+                        <h3>Education:</h3>
+                    </div>
+                    <div>
+                        <ul id="weT">
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- academic qualification -->
+                <div>
+                    <div>
+                        <h3>Projects:</h3>
+                    </div>
+                    <div>
+                        <ul id="aqT">
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- 9786144283 -->
+
+                <!-- area of intrest -->
+                <div>
+                    <div>
+                        <h3>Area of Interest:</h3>
+                    </div>
+                    <div>
+                        <ul id="inT">
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn background">
+                        Print CV
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- second column -->
+            <div class="col-md-4 text-center py-5 background colcolor">
+                <img src="../resume/default_picture.png" 
+                alt=""
+                class="img-fluid myimg"
+                id="imgTemplate" 
+                />
+                <div class="container">
+                    <p id="nameT1"><i class="fa-light fa-input-text"></i><b>Sowmiya Chelliah</b></p>
+                    <p id="contactT"><i class="fa-duotone fa-phone"></i>8778247849</p>
+                    <p id="emailT"><i class="fa-solid fa-paper-plane"></i>2015029@nec.edu.in</p>
+                    <!-- <p id="contactT">8778247849</p> -->
+                    <p id="addressT"><i class="fa-solid fa-location-dot"></i>Tirunelveli</p>
+                    <hr>
+                    <div class="rightd">
+                        <p><b><u>LinkedIN:</u></b></p>
+                        <p id="linkedT">www.youtube.com</p>
+                        <hr>
+                        <p><b><u>Languages Known:</u></b></p>
+                        <p id="languageT">Tamil,English</p>
+                        <div>
+                            <p><b><u>Skills:</u></b></p>
+                            <div>
+                                <ul id="skT">
+                                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                                </ul>
+                            </div>
+                            <p><b><u>Hobbies:</u></b></p>
+                            <div>
+                                <ul id="hbT">
+                                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ut.</li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>                   
+
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+    crossorigin="anonymous"></script>
+
+    <script src="script1.js"></script>
+
+</body>
+</html>

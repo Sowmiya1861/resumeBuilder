@@ -1,0 +1,41 @@
+#cv-template{
+    display: none;
+}
+
+.myimg{
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    overflow: hidden; 
+}
+
+.background{
+    background-color: #014c83;
+}
+
+.btn{
+    background-color: #14659e;
+    border: #48789b;
+    color: white;
+}
+
+.btn:hover{
+    background-color: #779ab4;
+    
+} 
+
+/* body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+} */
+
+/* .container{
+    background-image: url(images/bg.png);
+} */
+
+.rightd{
+    text-align: left;
+}
+
+.colcolor{
+    color: white;
+}
